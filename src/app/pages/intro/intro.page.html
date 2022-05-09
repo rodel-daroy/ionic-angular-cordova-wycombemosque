@@ -1,0 +1,32 @@
+<ion-content class="intro">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button color="primary" (click)="skip()">Skip</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-slides class="app-w-100" [pager]="true">
+        <ion-slide class="ion-padding" *ngFor="let slide of slides" [style.background-color]="slide.background">
+            <ion-grid class="ion-no-padding">
+                <div [style.marginTop]="slide.slideMarginTop"></div>
+                <img [src]="slide.image" [style.width]="slide.width" [style.height]="slide.height"
+                     [style.marginTop]="slide.imgMarginTop" [style.marginBottom]="slide.imgMarginBtm"
+                     [alt]="''" *ngIf="slide.showImage"/>
+                <p [innerHTML]="slide.headerText"
+                   [style.fontSize]="slide.headerTextFontSize" [style.color]="slide.headerTextColor"></p>
+                <h2 class="app-m-t-40" [innerHTML]="slide.title"
+                    [style.fontSize]="slide.titleFontSize" [style.color]="slide.titleColor"></h2>
+                <p [innerHTML]="slide.description"
+                   [style.fontSize]="slide.descFontSize" [style.color]="slide.descColor"></p>
+                <p [innerHTML]="slide.description2"
+                   [style.fontSize]="slide.descFontSize2" [style.color]="slide.descColor2"></p>
+                <p [innerHTML]="slide.description3"
+                   [style.fontSize]="slide.descFontSize3" [style.color]="slide.descColor3"></p>
+                <p [innerHTML]="slide.description4"
+                   [style.fontSize]="slide.descFontSize4" [style.color]="slide.descColor4"></p>
+                <a target="_blank" class="link-button" [innerHTML]="slide.linkButtonText" [href]="slide.url"
+                   [style.backgroundColor]="slide.linkButtonColor" [style.marginTop]="slide.linkButtonMarginTop"
+                   [style.color]="slide.linkButtonTextColor" *ngIf="slide.showUrl"></a>
+            </ion-grid>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

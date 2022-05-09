@@ -1,0 +1,169 @@
+@import "../../../theme/variables.scss";
+
+.segment-md .segment-button {
+  color: #ffffff;
+}
+
+.segment-md .segment-button.segment-activated {
+  border-color: #ffffff;
+}
+
+.segment-ios .segment-button.segment-activated {
+  background-color: #ffffff;
+  color: #fd6243;
+  opacity: 1;
+  transition: .1s all linear;
+  -webkit-transition: .1s all linear;
+}
+
+.segment-ios .segment-button {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.jamaat-times-card {
+  background: #ffffff;
+  border-radius: 4px;
+  margin: 2px;
+  padding: 20px;
+
+  .day {
+    margin: 8px;
+  }
+
+  ion-button {
+    width: 60px;
+    font-size: 10px;
+  }
+}
+
+
+.item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+  margin: 0;
+}
+
+.item {
+  width: calc(50% - 2px);
+  float: left;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 10px;
+
+  &:nth-child(2n + 1) {
+    margin-right: 2px;
+  }
+
+  &:nth-child(2n) {
+    margin-left: 2px;
+  }
+
+  .item-inner {
+    padding: 0;
+
+    .label {
+      margin: 0;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 80px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        @extend .textStyle;
+      }
+
+      p {
+        font-size: 1.2rem;
+        @extend .textStyle;
+        margin-bottom: 15px;
+      }
+
+      .two-btns {
+        display: inline-block;
+        padding-left: 12px;
+
+        .button {
+          padding: 0 10px;
+          font-size: 1.1rem;
+          width: calc(50% - 6px);
+          float: left;
+          margin: 0 3px;
+          height: 22px;
+          width: 63px;
+          max-width: 100%;
+        }
+      }
+
+      .prayerIcon {
+        text-align: center;
+        padding-bottom: 12px;
+        color: #f96f64;
+        opacity: 0;
+        animation: 5s ease fadeIn;
+        animation-fill-mode: forwards;
+      }
+
+      .fajr-icon-sml {
+        font-size: 2em;
+      }
+
+      ion-icon {
+        font-size: 1em !important;
+      }
+
+      @keyframes fadeIn {
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.list-md {
+  margin: 0;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f96f64;
+}
+
+.comments-btn {
+  margin-bottom: 5px !important;
+}
+
+.numberCircle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  background: #fff;
+  color: #666;
+  text-align: center;
+}
+
+.toolbar-title-ios {
+  padding-left: 78px !important;
+}
+
+.toolbar-ios {
+  padding-left: 18px;
+}
+
+.list-ios {
+  margin: 0;
+}
+
+
+

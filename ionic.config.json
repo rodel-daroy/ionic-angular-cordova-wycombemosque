@@ -1,0 +1,7 @@
+{
+  "name": "wycombemosque",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

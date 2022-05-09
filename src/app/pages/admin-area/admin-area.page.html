@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/AdminLoginPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Admin Area</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item tappable (click)="openNotsPage()">
+            <ion-icon slot="start" name="cloud-upload"></ion-icon>
+            <ion-label>Send a message</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable (click)="openAllSidesPage()">
+            <ion-icon slot="start" name="albums"></ion-icon>
+            <ion-label>Slides</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

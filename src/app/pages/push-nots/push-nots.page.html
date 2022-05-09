@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/AdminAreaPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Push Notification</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+    <ion-grid>
+        <ion-row class="app-m-b-8">
+            <ion-label>Send a message to all users of this app.</ion-label>
+        </ion-row>
+        <form class="app-w-100" #form="ngForm" (submit)="sendForm()">
+            <ion-list lines="none" class="ion-no-padding">
+                <ion-item>
+                    <ion-label position="stacked">Message title</ion-label>
+                    <ion-input type="text" name="title" [(ngModel)]="title" required="required"
+                               minlength="4"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Description</ion-label>
+                    <ion-textarea rows="10" type="text" name="desc" [(ngModel)]="desc" required="required"
+                                  minlength="3">
+                    </ion-textarea>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">URL link (optional)</ion-label>
+                    <ion-input type="url" name="url" [(ngModel)]="url" minlength="5"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Schedule this message (optional)</ion-label>
+                    <ion-datetime [min]="today" max="2022" name="schedule" displayFormat="MMM DD, YYYY - HH:mm"
+                                  [(ngModel)]="schedule"></ion-datetime>
+                </ion-item>
+            </ion-list>
+
+            <ion-button type="submit" color="danger" expand="full" shape="round" class="ion-margin-top"
+                        [disabled]="form.invalid">
+                Send Notification
+            </ion-button>
+        </form>
+    </ion-grid>
+</ion-content>

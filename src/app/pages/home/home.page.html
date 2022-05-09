@@ -1,0 +1,221 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>High Wycombe Mosque</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-home">
+    <div class="islamicDate">{{ islamicDate }}</div>
+
+    <ion-grid class="ion-no-padding" *ngIf="prayerTimes !== null">
+        <ion-row>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-sunrise home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Fajr', prayerTimes.Fajr)">
+                            Fajr
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Fajr', prayerTimes.Fajr)">
+                            {{ prayerTimes.Fajr }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-fajr home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Sunrise', prayerTimes.Sunrise)">
+                            Sunrise
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Sunrise', prayerTimes.Sunrise)">
+                            {{ prayerTimes.Sunrise }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-dhuhr home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Dhuhr', prayerTimes.Dhuhr)">
+                            Dhuhr
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Dhuhr', prayerTimes.Dhuhr)">
+                            {{ prayerTimes.Dhuhr }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-asr home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Asr', prayerTimes.Asr)">
+                            Asr
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Asr', prayerTimes.Asr)">
+                            {{ prayerTimes.Asr }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-maghrib home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Maghrib', prayerTimes.Maghrib)">
+                            Maghrib
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Maghrib', prayerTimes.Maghrib)">
+                            {{ prayerTimes.Maghrib }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding">
+                <ion-grid class="home-card">
+                    <ion-row class="ion-justify-content-center">
+                        <ion-icon class="ion-md-icon-isha home-large-icon"></ion-icon>
+                    </ion-row>
+                    <ion-row class="ion-justify-content-center">
+                        <ion-button color="secondary" size="small" shape="round"
+                                    (click)="openModal('Isha', prayerTimes.Isha)">
+                            Isha
+                        </ion-button>
+                        <ion-button color="danger" size="small" shape="round"
+                                    (click)="openModal('Isha', prayerTimes.Isha)">
+                            {{ prayerTimes.Isha }}
+                            <ion-icon slot="end" name="chevron-forward-outline" class="home-small-icon"></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid class="ion-no-padding">
+        <ion-slides [pager]="true">
+            <ion-slide *ngFor="let site of sitePrayers">
+                <ion-grid>
+                    <ion-toolbar>
+                        <div>{{ site.name }} - Jamaat Times</div>
+                    </ion-toolbar>
+                    <ion-row>
+                        <ion-col size="6">
+                            <ion-grid class="home-card">
+                                <ion-row class="ion-justify-content-center">
+                                    <ion-button color="secondary" size="small" shape="round">
+                                        Fajr
+                                    </ion-button>
+                                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                                        {{ site.Fajr }}
+                                    </ion-button>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        <ion-col size="6">
+                            <ion-grid class="home-card">
+                                <ion-row class="ion-justify-content-center">
+                                    <ion-button color="secondary" size="small" shape="round" class="comments-btn">
+                                        Dhuhr
+                                    </ion-button>
+                                    <ion-button color="danger" size="small" shape="round" fill="outline"
+                                                class="comments-btn">
+                                        {{ site.Dhuhr }}
+                                    </ion-button>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        <ion-col size="6">
+                            <ion-grid class="home-card">
+                                <ion-row class="ion-justify-content-center">
+                                    <ion-button color="secondary" size="small" shape="round" class="comments-btn">
+                                        Asr
+                                    </ion-button>
+                                    <ion-button color="danger" size="small" shape="round" fill="outline"
+                                                class="comments-btn">
+                                        {{ site.Asr }}
+                                    </ion-button>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        <ion-col size="6">
+                            <ion-grid class="home-card">
+                                <ion-row class="ion-justify-content-center">
+                                    <div class="two-btns">
+                                        <ion-button color="secondary" class="comments-btn" size="small" shape="round">
+                                            Maghrib
+                                        </ion-button>
+                                        <ion-button color="danger" class="comments-btn" size="small" shape="round"
+                                                    fill="outline">
+                                            {{ site.Maghrib }}
+                                        </ion-button>
+                                    </div>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                        <ion-col size="6">
+                            <ion-grid class="home-card">
+                                <ion-row class="ion-justify-content-center">
+                                    <ion-button color="secondary" class="comments-btn" size="small" shape="round">
+                                        Isha
+                                    </ion-button>
+                                    <ion-button color="danger" class="comments-btn" size="small" shape="round"
+                                                fill="outline">
+                                        {{ site.Isha }}
+                                    </ion-button>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-slide>
+        </ion-slides>
+    </ion-grid>
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="secondary">Mosque Donation</ion-label>
+            <ion-select interface="popover" placeholder="Select Amount" #donate [(ngModel)]="donate_amount"
+                        (ionChange)="checkDonate(donate.value)">
+                <ion-select-option value="10">£10</ion-select-option>
+                <ion-select-option value="25">£25</ion-select-option>
+                <ion-select-option value="50">£50</ion-select-option>
+                <ion-select-option value="100">£100</ion-select-option>
+                <ion-select-option value="">Other</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item *ngIf="show_custom">
+            <ion-input color="secondary" type="text" placeholder="Enter amount" [(ngModel)]="donate_amount"></ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="payWithPayPal()">Donate via PayPal</ion-button>
+    </ion-list>
+</ion-content>
+

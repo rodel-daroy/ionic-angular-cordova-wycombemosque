@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MenuPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Ramadhan {{ ramadhanYear }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="light" class="page-ramadhan">
+    <ion-grid class="ion-no-padding">
+        <ion-row>
+            <ion-col size="12" class="ion-no-padding">
+                <ion-grid class="ramadhan-card">
+                    <p class="notificationNotice">
+                        <strong>Dua at the beginning of the fast:</strong><br/>
+                        <br/>وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ <br/>
+                        Wa bisawmi ghadinn nawaiytu min shahri Ramadhan
+                    </p>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding">
+                <ion-grid class="ramadhan-card">
+                    <p class="notificationNotice">
+                        <strong>Dua at the end of the fast:</strong><br/>
+                        <br/>اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ وَعَليْكَ تَوَكّلتُ وَ عَلى رِزْقِكَ اَفْطَرْتُ<br/>
+                        Allahumma inni laka sumtu wa bika aamantu wa alayka tawakkaltu wa ala rizq-ika-aftartu
+                    </p>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="6" *ngFor="let day of ramadhanDays; let i = index">
+                <ion-grid class="ion-padding ramadhan-card">
+                    <ion-row>
+                        <ion-label class="date">{{ ramadhanDays[i].date }}</ion-label>
+                    </ion-row>
+                    <ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Sehri</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ ramadhanDays[i].sehriTime}}
+                        </ion-button>
+                    </ion-row>
+                    <ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Iftari</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ ramadhanDays[i].iftariTime }}
+                        </ion-button>
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

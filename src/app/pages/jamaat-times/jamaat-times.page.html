@@ -1,0 +1,173 @@
+<ion-header>
+    <ion-toolbar color="danger" class="ion-no-border-bottom">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/JamaatMonthsPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Jamaat times - {{ month?.monthName }}</ion-title>
+    </ion-toolbar>
+
+    <ion-toolbar color="danger" class="ion-no-border-top">
+        <ion-segment [(ngModel)]="mosques">
+            <ion-segment-button value="jubilee">
+                Jubilee
+            </ion-segment-button>
+            <ion-segment-button value="castlefield">
+                Castlefield
+            </ion-segment-button>
+            <ion-segment-button value="townfield">
+                Townfield
+            </ion-segment-button>
+            <ion-segment-button value="micklefield">
+                Micklefield
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+    <div [ngSwitch]="mosques">
+        <ion-grid class="ion-no-padding" *ngSwitchCase="'jubilee'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let prayer of jubileeTab">
+                    <ion-grid class="jamaat-times-card">
+                        <ion-row>
+                            <ion-label class="day">{{ prayer.Date }}</ion-label>
+                        </ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Fajr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Fajr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Sunrise</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Sunrise }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline"> Dhuhr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline" class="comments-btn">
+                            {{ prayer.Dhuhr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Asr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Asr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Maghrib</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline" class="comments-btn">
+                            {{ prayer.Maghrib }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Isha</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline" class="comments-btn">
+                            {{ prayer.Isha }}
+                        </ion-button>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid class="ion-no-padding" *ngSwitchCase="'castlefield'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let prayer of castlefieldTab">
+                    <ion-grid class="jamaat-times-card">
+                        <ion-row>
+                            <ion-label class="day">{{ prayer.Date }}</ion-label>
+                        </ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Fajr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Fajr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Sunrise</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Sunrise }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Dhuhr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Dhuhr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Asr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Asr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Maghrib</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Maghrib }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Isha</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Isha }}
+                        </ion-button>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid class="ion-no-padding" *ngSwitchCase="'townfield'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let prayer of townfieldTab">
+                    <ion-grid class="jamaat-times-card">
+                        <ion-row>
+                            <ion-label class="day">{{ prayer.Date }}</ion-label>
+                        </ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Fajr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Fajr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Sunrise</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Sunrise }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Dhuhr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Dhuhr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Asr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Asr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Maghrib</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Maghrib }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Isha</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Isha }}
+                        </ion-button>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid class="ion-no-padding" *ngSwitchCase="'micklefield'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let prayer of micklefieldTab">
+                    <ion-grid class="jamaat-times-card">
+                        <ion-row>
+                            <ion-label class="day">{{ prayer.Date }}</ion-label>
+                        </ion-row>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Fajr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Fajr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Sunrise</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Sunrise }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Dhuhr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Dhuhr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Asr</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Asr }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Maghrib</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Maghrib }}
+                        </ion-button>
+                        <ion-button color="secondary" size="small" shape="round" fill="outline">Isha</ion-button>
+                        <ion-button color="danger" size="small" shape="round" fill="outline">
+                            {{ prayer.Isha }}
+                        </ion-button>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

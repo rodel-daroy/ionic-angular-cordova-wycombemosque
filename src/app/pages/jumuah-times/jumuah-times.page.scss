@@ -1,0 +1,22 @@
+@import "../../../theme/variables.scss";
+
+.page-jumuah-times {
+
+  ion-list {
+    background: var(--ion-color-light);
+
+    ion-item {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+    }
+  }
+
+  .jumuah-times-card {
+
+    ion-button {
+      width: 150px;
+      font-size: 12px;
+    }
+  }
+
+}

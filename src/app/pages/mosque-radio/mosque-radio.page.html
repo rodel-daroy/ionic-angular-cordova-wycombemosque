@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MenuPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Mosque Radios</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-mosque-radio">
+    <ion-grid class="ion-padding">
+        <ion-row class="ion-margin-bottom ion-justify-content-center">
+            <ion-button color="secondary" shape="round" fill="outline">Jubilee Road</ion-button>
+            <ion-button tappable color="danger" shape="round" fill="outline" (click)="openJubileeRadioURL()">
+                <ion-icon slot="icon-only" name="volume-high-outline"></ion-icon>
+            </ion-button>
+        </ion-row>
+        <ion-row class="ion-margin-bottom ion-justify-content-center">
+            <ion-button color="secondary" shape="round" fill="outline"> Castlefield</ion-button>
+            <ion-button tappable color="danger" shape="round" fill="outline" (click)="openCastlefiedlRadioURL()">
+                <ion-icon slot="icon-only" name="volume-high-outline"></ion-icon>
+            </ion-button>
+        </ion-row>
+        <ion-row class="ion-margin-bottom ion-justify-content-center">
+            <ion-button color="secondary" shape="round" fill="outline">Townfield House</ion-button>
+            <ion-button tappable color="danger" shape="round" fill="outline" (click)="openTownfieldRadioURL()">
+                <ion-icon slot="icon-only" name="volume-high-outline"></ion-icon>
+            </ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button color="secondary" shape="round" fill="outline">Micklefield</ion-button>
+            <ion-button tappable color="danger" shape="round" fill="outline" (click)="openMicklefieldRadioURL()">
+                <ion-icon slot="icon-only" name="volume-high-outline"></ion-icon>
+            </ion-button>
+        </ion-row>
+    </ion-grid>
+    <p class="notificationNotice">
+        Please note that mosque radios are only live at the time of prayer and ad hoc events.
+    </p>
+</ion-content>
+

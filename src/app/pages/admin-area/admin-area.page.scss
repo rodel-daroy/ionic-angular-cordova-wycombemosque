@@ -1,0 +1,58 @@
+.wrapper {
+  .prayers {
+    ion-list-header {
+      padding: 5px 10px;
+      border-top: 1px solid #dedede;
+      font-size: 1.2em;
+      color: #7d7d7d;
+      margin-bottom: 0px;
+    }
+
+    .item-block {
+      border-top: 1px solid #c7c7c7;
+      min-height: 2em;
+      color: #005e7c;
+
+      &:last-child {
+        border-bottom: 1px solid #c7c7c7;
+      }
+
+      ion-icon {
+        color: #fd6243;
+        font-size: 30px;
+      }
+
+      .marginLeft {
+        margin-left: 5px;
+      }
+
+      .marginLeftYT {
+        margin-left: 0px !important;
+      }
+    }
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .blueText {
+    // color: #005e7c;
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+
+  .footerTitle {
+    font-size: 1em;
+    font-weight: 200;
+    padding-right: 20px;
+  }
+
+  .list-ios .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .item-ios.item-block .item-inner {
+    border-bottom: none;
+  }
+}

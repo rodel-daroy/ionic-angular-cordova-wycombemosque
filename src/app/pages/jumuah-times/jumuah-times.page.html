@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MenuPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Jumu'ah times</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-jumuah-times">
+    <ion-list lines="none" class="ion-no-padding">
+        <ion-item>
+            <ion-grid class="jumuah-times-card">
+                <ion-row class="ion-margin-vertical ion-justify-content-center">
+                    <ion-button color="secondary" shape="round">JUBILEE ROAD</ion-button>
+                </ion-row>
+                <ion-row class="ion-margin-bottom ion-justify-content-center">
+                    <ion-button color="secondary" shape="round" fill="outline"> First Jamaat</ion-button>
+                    <ion-button color="danger" shape="round" fill="outline">{{ jumuahTimesJR1 }}</ion-button>
+                </ion-row>
+                <ion-row class="ion-margin-bottom ion-justify-content-center">
+                    <ion-button color="secondary" shape="round" fill="outline"> Second Jamaat</ion-button>
+                    <ion-button color="danger" shape="round" fill="outline">{{ jumuahTimesJR2 }}</ion-button>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+
+        <ion-item class="app-m-t-8">
+            <ion-grid class="jumuah-times-card">
+                <ion-row class="ion-margin-vertical ion-justify-content-center">
+                    <ion-button color="secondary" shape="round">CASTLEFIELD</ion-button>
+                </ion-row>
+                <ion-row class="ion-margin-bottom ion-justify-content-center">
+                    <ion-button color="secondary" shape="round" fill="outline">First Jamaat</ion-button>
+                    <ion-button color="danger" shape="round" fill="outline">{{ jumuahTimesCF1 }}</ion-button>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+
+        <ion-item class="app-m-t-8">
+            <ion-grid class="jumuah-times-card">
+                <ion-row class="ion-margin-vertical ion-justify-content-center">
+                    <ion-button color="secondary" shape="round">TOWNFIELD HOUSE</ion-button>
+                </ion-row>
+                <ion-row class="ion-margin-bottom ion-justify-content-center">
+                    <ion-button color="secondary" shape="round" fill="outline">First Jamaat</ion-button>
+                    <ion-button color="danger" shape="round" fill="outline">{{ jumuahTimesTF1 }}</ion-button>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+
+        <ion-item class="app-m-t-8">
+            <ion-grid class="jumuah-times-card">
+                <ion-row class="ion-margin-vertical ion-justify-content-center">
+                    <ion-button color="secondary" shape="round">MICKLEFIELD</ion-button>
+                </ion-row>
+                <ion-row class="ion-margin-bottom ion-justify-content-center">
+                    <ion-button color="secondary" shape="round" fill="outline">First Jamaat</ion-button>
+                    <ion-button color="danger" shape="round" fill="outline">{{ jumuahTimesMF1 }}</ion-button>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+</ion-content>

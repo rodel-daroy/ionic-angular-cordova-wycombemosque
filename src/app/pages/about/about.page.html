@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MenuPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>About</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-about">
+    <ion-grid class="ion-no-padding">
+        <ion-row class="app-p-8 app-flex-column ion-align-items-center">
+            <img class="mosquelogo" src="assets/imgs/mosque-icon-about-page.svg" alt="">
+            <ion-button color="secondary" shape="round" fill="outline">High Wycombe Mosque</ion-button>
+            <p class="ion-no-margin" (click)="tapEvent()">App version: 4.0.4</p>
+        </ion-row>
+        <ion-row class="app-m-t-8 app-flex-column ion-align-items-center">
+            <ion-button color="secondary" shape="round" fill="outline">Developer</ion-button>
+            <p class="ion-no-margin">Imran Akram <br/>AKR Designs</p>
+        </ion-row>
+        <ion-row class="ion-padding app-flex-column ion-align-items-center">
+            <ion-button color="secondary" shape="round" fill="outline">Credits</ion-button>
+            <p class="ion-no-margin">Habiba Akram for her amazing design tips and ideas.</p>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,39 @@
+.intro {
+  --background: var(--ion-color-light);
+
+  ion-toolbar {
+    --background: #ffffff;
+  }
+
+  ion-slides {
+    --bullet-background: var(--ion-color-medium);
+    --bullet-background-active: var(--ion-color-danger)
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .link-button {
+    background-color: #d64131;
+    border-radius: 5px;
+    border: none;
+    margin: 4px 2px;
+    padding: 5px 100px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+}

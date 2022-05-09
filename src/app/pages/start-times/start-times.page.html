@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MonthsPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Start Times: {{month.monthName}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-start-times">
+    <ion-grid class="ion-no-padding">
+        <ion-row>
+            <ion-col size="6" *ngFor="let day of month.days; let i = index">
+                <ion-grid class="start-times-card">
+                    <ion-row>
+                        <ion-label class="day">{{ month.days[i].Date }} </ion-label>
+                    </ion-row>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Fajr</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Fajr }}
+                    </ion-button>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Sunrise</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Sunrise }}
+                    </ion-button>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Dhuhr</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Dhuhr }}
+                    </ion-button>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Asr</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Asr }}
+                    </ion-button>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Maghrib</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Maghrib }}
+                    </ion-button>
+                    <ion-button color="secondary" size="small" shape="round" fill="outline">Isha</ion-button>
+                    <ion-button color="danger" size="small" shape="round" fill="outline">
+                        {{ month.days[i].Isha }}
+                    </ion-button>
+                </ion-grid>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+

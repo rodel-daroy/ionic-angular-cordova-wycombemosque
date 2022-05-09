@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/AboutPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Admin Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="wrapper">
+        <form #form="ngForm" (submit)="login()">
+            <ion-list>
+                <ion-item>
+                    <ion-label position="stacked">Enter Password</ion-label>
+                    <ion-input type="tel" name="pin" [(ngModel)]="pin" required="required"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-button color="danger" expand="full" type="submit" [disabled]="form.invalid">
+                        <ion-icon name="lock-open"></ion-icon>
+                        Sign in
+                    </ion-button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </div>
+</ion-content>

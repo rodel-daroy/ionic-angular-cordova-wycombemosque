@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/AdminAreaPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Intro Sliders</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+    <ion-list lines="none">
+        <ion-item>
+            Current sliders
+        </ion-item>
+        <ion-item *ngFor="let slide of slides">
+            <ion-thumbnail slot="start">
+                <img [src]="slide.image" alt=""/>
+            </ion-thumbnail>
+            <ion-button slot="end" color="dark" (click)="updateSlide(slide, 'disable')" *ngIf="!slide.disabled">
+                Disable
+            </ion-button>
+            <ion-button slot="end" color="secondary" (click)="updateSlide(slide, 'enable')" *ngIf="slide.disabled">
+                Enable
+            </ion-button>
+            <ion-button slot="end" color="danger" (click)="deleteSlide(slide)">
+                Delete
+            </ion-button>
+        </ion-item>
+    </ion-list>
+    <ion-item-divider></ion-item-divider>
+    <ion-label>Use the form below to add a new slide</ion-label>
+    <form #form="ngForm" (submit)="addSlide()" *ngIf="slideLength < 10">
+        <ion-list lines="none">
+            <ion-item>
+                <ion-label position="stacked">Image Url</ion-label>
+                <ion-input type="text" name="image" [(ngModel)]="image" required="required" minlength="4"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Button title (optional)</ion-label>
+                <ion-textarea type="text" name="title" [(ngModel)]="title" placeholder="e.g Register Now">
+                </ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Button link (optional)</ion-label>
+                <ion-input type="text" name="url" placeholder="Link for the above button" [(ngModel)]="url"></ion-input>
+            </ion-item>
+
+            <ion-button type="submit" expand="full" shape="round" class="ion-margin-top" [disabled]="form.invalid">
+                Add Slide
+            </ion-button>
+        </ion-list>
+    </form>
+
+    <ion-label *ngIf="slideLength === 10">
+        Maximum 10 slides allowed. Please delete some slides before uploading a new one.
+    </ion-label>
+</ion-content>

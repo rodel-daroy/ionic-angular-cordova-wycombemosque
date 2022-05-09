@@ -1,0 +1,96 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/SettingsPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ site }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+    <h6 class="ion-no-margin app-p-8">
+        <ion-icon name="notifications"></ion-icon>
+        Notifications for Jamaat prayers
+    </h6>
+    <ion-list lines="none" class="ion-no-padding">
+        <ion-item>
+            <ion-label color="secondary">Fajr</ion-label>
+            <ionic-selectable
+                    class="selectableOptions"
+                    [(ngModel)]="prayer_1.snooze"
+                    [items]="snoozeTimes"
+                    itemValueField="id"
+                    itemTextField="name"
+                    [canSearch]="false"
+                    (onChange)="snoozeChange($event, 'prayer_1')"
+                    [disabled]="disabled">
+            </ionic-selectable>
+            <ion-toggle slot="end" color="danger" [(ngModel)]="prayer_1.state" (ionChange)="updatePrayers($event, 1)"
+                        [disabled]="disabled"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="secondary">Dhuhr</ion-label>
+            <ionic-selectable
+                    class="selectableOptions"
+                    [(ngModel)]="prayer_2.snooze"
+                    [items]="snoozeTimes"
+                    itemValueField="id"
+                    itemTextField="name"
+                    [canSearch]="false"
+                    (onChange)="snoozeChange($event, 'prayer_2')"
+                    [disabled]="disabled">
+            </ionic-selectable>
+            <ion-toggle slot="end" color="danger" [(ngModel)]="prayer_2.state" (ionChange)="updatePrayers($event, 2)"
+                        [disabled]="disabled"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="secondary">Asr</ion-label>
+            <ionic-selectable
+                    class="selectableOptions"
+                    [(ngModel)]="prayer_3.snooze"
+                    [items]="snoozeTimes"
+                    itemValueField="id"
+                    itemTextField="name"
+                    [canSearch]="false"
+                    (onChange)="snoozeChange($event, 'prayer_3')"
+                    [disabled]="disabled">
+            </ionic-selectable>
+            <ion-toggle slot="end" color="danger" [(ngModel)]="prayer_3.state" (ionChange)="updatePrayers($event, 3)"
+                        [disabled]="disabled"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="secondary">Maghrib</ion-label>
+            <ionic-selectable
+                    class="selectableOptions"
+                    [(ngModel)]="prayer_4.snooze"
+                    [items]="snoozeTimes"
+                    itemValueField="id"
+                    itemTextField="name"
+                    [canSearch]="false"
+                    (onChange)="snoozeChange($event, 'prayer_4')"
+                    [disabled]="disabled">
+            </ionic-selectable>
+            <ion-toggle slot="end" color="danger" [(ngModel)]="prayer_4.state" (ionChange)="updatePrayers($event, 4)"
+                        [disabled]="disabled"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="secondary">Isha</ion-label>
+            <ionic-selectable
+                    class="selectableOptions"
+                    [(ngModel)]="prayer_5.snooze"
+                    [items]="snoozeTimes"
+                    itemValueField="id"
+                    itemTextField="name"
+                    [canSearch]="false"
+                    (onChange)="snoozeChange($event, 'prayer_5')"
+                    [disabled]="disabled">
+            </ionic-selectable>
+            <ion-toggle slot="end" color="danger" [(ngModel)]="prayer_5.state" (ionChange)="updatePrayers($event, 5)"
+                        [disabled]="disabled"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>

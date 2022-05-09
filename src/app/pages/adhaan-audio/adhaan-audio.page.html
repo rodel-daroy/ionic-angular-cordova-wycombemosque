@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/SettingsPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Audio List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+    <ion-list class="ion-no-padding">
+        <ion-item>
+            Makkah al-Mukarramah
+            <ion-button slot="end" color="danger" (click)="playAudioMakkah()">
+                play
+                <ion-icon class="ion-padding-start" name="play"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            Madinah al-Munawarah
+            <ion-button slot="end" color="danger" (click)="playAudioMadinah()">
+                play
+                <ion-icon class="ion-padding-start" name="play"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            Hafiz Sajjad Hussain
+            <ion-button slot="end" color="danger" (click)="playAudioHSH()">
+                play
+                <ion-icon class="ion-padding-start" name="play"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            Hamaad Akram
+            <ion-button slot="end" color="danger" (click)="playAudioHMA()">
+                play
+                <ion-icon class="ion-padding-start" name="play"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-button slot="end" color="danger" (click)="stopAllAudio()">
+                stop
+                <ion-icon class="ion-padding-start" name="square"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

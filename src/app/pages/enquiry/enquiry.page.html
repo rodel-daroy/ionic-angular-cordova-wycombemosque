@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/ContactUsPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Ask the Imam</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+    <ion-grid class="ion-padding">
+        <ion-label class="ion-text-wrap notice">
+            Ask the Imam service is available through Shaykh Tanveer Hussain.
+            <br/><br/>
+            All information is sent via an email to Shaykh Tanveer and not stored or shared with third-parties.
+            <br/><br/>
+        </ion-label>
+
+        <form #form="ngForm" (submit)="sendForm()">
+            <ion-list lines="full" class="ion-no-padding">
+                <ion-item>
+                    <ion-label position="stacked">Full Name</ion-label>
+                    <ion-input type="text" name="name" [(ngModel)]="name" required="required" minlength="4"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Email</ion-label>
+                    <ion-input type="email" name="email" [(ngModel)]="email" required="required" minlength="5">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">Message</ion-label>
+                    <ion-textarea type="text" name="message" [(ngModel)]="message" required="required"
+                                  minlength="10" rows="10"></ion-textarea>
+                </ion-item>
+            </ion-list>
+
+            <ion-button type="submit" color="danger" expand="full" shape="round" class="ion-margin-top"
+                        [disabled]="form.invalid">
+                Send Enquiry
+            </ion-button>
+        </form>
+    </ion-grid>
+</ion-content>

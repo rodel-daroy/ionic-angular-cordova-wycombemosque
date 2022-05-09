@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/TabsPage/pages/MenuPage"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Months</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+    <ion-list lines="full" class="ion-no-padding">
+        <ion-item *ngFor="let month of calendarMonths" (click)="monthSelected(month)">
+            {{month.monthName}}
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

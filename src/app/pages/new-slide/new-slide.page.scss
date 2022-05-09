@@ -1,0 +1,24 @@
+ion-list {
+  background: var(--ion-color-light);
+
+  ion-item {
+    margin-bottom: 4px;
+  }
+}
+
+ion-item-divider {
+  min-height: 0;
+  margin-bottom: 8px;
+}
+
+ion-input {
+  input::placeholder {
+    font-size: 0.75em;
+  }
+}
+
+ion-textarea {
+  textarea::placeholder {
+    font-size: 0.75em;
+  }
+}

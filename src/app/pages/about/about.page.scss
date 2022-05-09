@@ -1,0 +1,113 @@
+@import "../../../theme/variables.scss";
+
+.page-about {
+
+  ion-grid {
+    background: #ffffff;
+    font-size: 12px;
+  }
+
+  .mosquelogo {
+    width: 50px;
+    size: 1em;
+    fill: red;
+  }
+
+}
+
+.item {
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 10px;
+
+  .item-inner {
+    padding: 0;
+
+    .label {
+      margin: 0;
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        @extend .textStyle;
+      }
+
+      p {
+        font-size: 1.2rem;
+        @extend .textStyle;
+        margin-bottom: 15px;
+      }
+
+      .two-btns {
+        .center {
+          margin: auto;
+          width: 50%;
+          border: 3px solid green;
+          padding: 10px;
+        }
+
+        .button {
+          padding: 0 20px;
+          font-size: 1.1rem;
+          width: calc(100%);
+          margin: 10px 3px;
+          height: 25px;
+          width: 125px;
+          max-width: 100%;
+        }
+      }
+
+      .two-btns-2 {
+        display: inline-block;
+        padding-left: 0;
+
+        .button {
+          padding: 0 20px;
+          font-size: 1.1rem;
+          width: calc(100%);
+          margin: 10px 3px;
+          height: 25px;
+          width: 125px;
+          max-width: 100%;
+        }
+      }
+
+      .prayerIcon {
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: #f96f64;
+      }
+
+      .fajr-icon-sml {
+        font-size: 2em;
+      }
+
+      ion-icon {
+        font-size: 1em !important;
+      }
+    }
+  }
+}
+
+.list-md {
+  margin: 0;
+}
+
+.comments-btn {
+  margin-bottom: 5px !important;
+}
+
+.toolbar-title-ios {
+  padding-left: 91px !important;
+}
+
+.toolbar-ios {
+  padding-left: 18px;
+}
+
+.mosquelogo {
+  width: 50px;
+  margin-bottom: 4px;
+}

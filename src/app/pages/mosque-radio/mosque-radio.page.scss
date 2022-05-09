@@ -1,0 +1,109 @@
+@import "../../../theme/variables.scss";
+
+.page-mosque-radio {
+  ion-grid {
+    background: #ffffff;
+
+    ion-button {
+      width: 150px;
+      height: 60px;
+      font-size: 12px;
+    }
+  }
+}
+
+.item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+  margin: 0;
+}
+
+.item-md .item-button {
+  width: 150px;
+}
+
+.list-md .item-block .item-inner {
+  border-bottom: none !important;
+}
+
+.item {
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 10px;
+
+  .item-inner {
+    padding: 0;
+
+    .label {
+      margin: 0;
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        @extend .textStyle;
+      }
+
+      p {
+        font-size: 1.2rem;
+        @extend .textStyle;
+        margin-bottom: 15px;
+      }
+
+      .two-btns {
+        .center {
+          margin: auto;
+          // width: 50%;
+          // border: 3px solid green;
+          // padding: 10px;
+        }
+
+        .button {
+          padding: 0 20px;
+          font-size: 1.25rem;
+          width: calc(100%);
+          margin: 10px 3px;
+          height: 60px;
+          width: 125px;
+          max-width: 100%;
+        }
+      }
+
+      .fajr-icon-sml {
+        font-size: 2em;
+      }
+
+      ion-icon {
+        font-size: 2em !important;
+      }
+    }
+  }
+}
+
+.list-md {
+  margin: 0px;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f96f64;
+}
+
+.comments-btn {
+  margin-bottom: 5px !important;
+}
+
+.toolbar-title-ios {
+  padding-left: 91px !important;
+}
+
+.toolbar-ios {
+  padding-left: 18px;
+}
+
+.notificationNotice {
+  padding: 0 15px;
+  color: #7d7d7d;
+  font-size: 0.85em;
+}

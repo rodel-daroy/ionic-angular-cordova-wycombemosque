@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>Menu</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-menu">
+    <ion-list lines="full" class="ion-no-padding">
+        <ion-item tappable class="menu-item" (click)="openMonthsPage()">
+            <ion-icon slot="start" name="sunny"></ion-icon>
+            <div class="marginLeft blueText">Prayer Start Times</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openJamaatMonthsPage()">
+            <ion-icon slot="start" name="people-outline"></ion-icon>
+            <div class="marginLeft blueText">Jamaat Times</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openJumuahTimesPage()">
+            <ion-icon slot="start" name="star"></ion-icon>
+            <div class="marginLeft blueText">Jumu'ah Times</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openSoundCloudPage()">
+            <ion-icon slot="start" name="mic-outline"></ion-icon>
+            <div class="marginLeft blueText">Friday Sermons</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openMosqueRadioPage()">
+            <ion-icon slot="start" name="server-outline"></ion-icon>
+            <div class="marginLeft blueText">Mosque Radios</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openRamadhanPage()">
+            <ion-icon slot="start" name="moon"></ion-icon>
+            <div class="marginLeft blueText">Ramadhan</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openCILwebPage()">
+            <ion-icon slot="start" name="today-outline"></ion-icon>
+            <div class="marginLeft blueText">CIL Events</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openCILyouTubePage()">
+            <ion-icon slot="start" name="logo-youtube"></ion-icon>
+            <div class="marginLeftYT blueText">CIL Videos</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item tappable class="menu-item" (click)="openContactUsPage()">
+            <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+            <div class="marginLeft blueText">Contact Us</div>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-item tappable (click)="openAboutPage()">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        <h6 class="blueText footerTitle">About</h6>
+    </ion-item>
+</ion-footer>

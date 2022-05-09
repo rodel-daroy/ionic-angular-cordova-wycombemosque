@@ -1,0 +1,137 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+        <ion-title>Settings</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="openAdhaanAudioPage()">
+                <ion-icon slot="icon-only" color="light" name="volume-high-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="page-settings">
+    <ion-grid class="ion-no-padding">
+        <ion-row class="app-p-8">
+            <h6 class="ion-no-margin">
+                <ion-icon name="notifications"></ion-icon>
+                Notifications for beginning of prayer
+            </h6>
+        </ion-row>
+
+        <ion-list lines="none" class="ion-no-padding">
+            <ion-item>
+                <ion-label color="secondary">Fajr</ion-label>
+                <ion-toggle color="danger" [(ngModel)]="prayer_1" (ngModelChange)="updateItem(1)"></ion-toggle>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-label color="secondary">Select Adhaan</ion-label>
+                <ion-select okText="Okay" cancelText="Dismiss" interface="action-sheet"
+                            #sound1 [ngModel]="selectedSound1" (ionChange)="changeSound(sound1.value, 'prayer_1')">
+                    <ion-select-option value="0">Silent</ion-select-option>
+                    <ion-select-option value="1">Makkah al-Mukarramah</ion-select-option>
+                    <ion-select-option value="2">Madinah al-Munawarah</ion-select-option>
+                    <ion-select-option value="3">Hafiz Sajjad Hussain - High Wycombe</ion-select-option>
+                    <ion-select-option value="4">Hamaad Akram - High Wycombe</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="secondary">Dhuhr</ion-label>
+                <ion-toggle color="danger" [(ngModel)]="prayer_2" (ngModelChange)="updateItem(2)"></ion-toggle>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-label color="secondary">Select Adhaan</ion-label>
+                <ion-select okText="Okay" cancelText="Dismiss" interface="action-sheet"
+                            #sound2 [ngModel]="selectedSound2" (ionChange)="changeSound(sound2.value, 'prayer_2')">
+                    <ion-select-option value="0">Silent</ion-select-option>
+                    <ion-select-option value="1">Makkah al-Mukarramah</ion-select-option>
+                    <ion-select-option value="2">Madinah al-Munawarah</ion-select-option>
+                    <ion-select-option value="3">Hafiz Sajjad Hussain - High Wycombe</ion-select-option>
+                    <ion-select-option value="4">Hamaad Akram - High Wycombe</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="secondary">Asr</ion-label>
+                <ion-toggle color="danger" [(ngModel)]="prayer_3" (ngModelChange)="updateItem(3)"></ion-toggle>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-label color="secondary">Select Adhaan</ion-label>
+                <ion-select okText="Okay" cancelText="Dismiss" interface="action-sheet"
+                            #sound3 [ngModel]="selectedSound3" (ionChange)="changeSound(sound3.value, 'prayer_3')">
+                    <ion-select-option value="0">Silent</ion-select-option>
+                    <ion-select-option value="1">Makkah al-Mukarramah</ion-select-option>
+                    <ion-select-option value="2">Madinah al-Munawarah</ion-select-option>
+                    <ion-select-option value="3">Hafiz Sajjad Hussain - High Wycombe</ion-select-option>
+                    <ion-select-option value="4">Hamaad Akram - High Wycombe</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="secondary">Maghrib</ion-label>
+                <ion-toggle color="danger" [(ngModel)]="prayer_4" (ngModelChange)="updateItem(4)"></ion-toggle>
+            </ion-item>
+            <ion-item class="ion-margin-bottom">
+                <ion-label color="secondary">Select Adhaan</ion-label>
+                <ion-select okText="Okay" cancelText="Dismiss" interface="action-sheet"
+                            #sound4 [ngModel]="selectedSound4" (ionChange)="changeSound(sound4.value, 'prayer_4')">
+                    <ion-select-option value="0">Silent</ion-select-option>
+                    <ion-select-option value="1">Makkah al-Mukarramah</ion-select-option>
+                    <ion-select-option value="2">Madinah al-Munawarah</ion-select-option>
+                    <ion-select-option value="3">Hafiz Sajjad Hussain - High Wycombe</ion-select-option>
+                    <ion-select-option value="4">Hamaad Akram - High Wycombe</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="secondary">Isha</ion-label>
+                <ion-toggle color="danger" [(ngModel)]="prayer_5" (ngModelChange)="updateItem(5)"></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-label color="secondary">Select Adhaan</ion-label>
+                <ion-select okText="Okay" cancelText="Dismiss" interface="action-sheet"
+                            #sound5 [ngModel]="selectedSound5" (ionChange)="changeSound(sound5.value, 'prayer_5')">
+                    <ion-select-option value="0">Silent</ion-select-option>
+                    <ion-select-option value="1">Makkah al-Mukarramah</ion-select-option>
+                    <ion-select-option value="2">Madinah al-Munawarah</ion-select-option>
+                    <ion-select-option value="3">Hafiz Sajjad Hussain - High Wycombe</ion-select-option>
+                    <ion-select-option value="4">Hamaad Akram - High Wycombe</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+        <ion-row class="app-p-8">
+            <h6 class="ion-no-margin">
+                <ion-icon name="notifications"></ion-icon>
+                Notifications for Jamaat prayers
+            </h6>
+        </ion-row>
+
+        <ion-list lines="full" class="ion-no-padding">
+            <ion-item tappable (click)="openSite('Jubilee Road', 100)">
+                <div class="blueText">Jubilee Road</div>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+            <ion-item tappable (click)="openSite('Castlefield', 200)">
+                <div class="blueText">Castlefield</div>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+            <ion-item tappable (click)="openSite('Townfield House', 300)">
+                <div class="blueText">Townfield House (Totteridge)</div>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+            <ion-item tappable (click)="openSite('Micklefield', 400)">
+                <div class="blueText">Micklefield</div>
+                <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-item>
+        </ion-list>
+
+        <ion-row>
+            <p class="notificationNotice">
+                Please note that all notification and sound settings are updated at 1.00am for the following day.
+                Changing
+                these settings will not take effect until then.
+            </p>
+        </ion-row>
+    </ion-grid>
+</ion-content>
